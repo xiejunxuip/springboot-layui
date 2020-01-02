@@ -1,5 +1,6 @@
 package com.haiyu.manager.shiro;
 
+import com.haiyu.manager.common.utils.JsonUtilKt;
 import com.haiyu.manager.pojo.BaseAdminUser;
 import com.haiyu.manager.service.AdminPermissionService;
 import com.haiyu.manager.service.AdminRoleService;
@@ -101,7 +102,9 @@ public class MyRealm extends AuthorizingRealm {
         String username = token.getUsername();
         // 调用数据层
         BaseAdminUser sysUser = userService.findByUserName(username);
-        logger.debug("用户登录认证！用户信息user：" + sysUser);
+        // String data = {"id":1,"sysUserName":"admin","sysUserPwd":"3ef7164d1f6167cb9f2658c07d3c2f0a","roleId":1,"userPhone":"13411182215","regTime":"2018-11-22 10:57:33","userStatus":1}
+        // BaseAdminUser sysUser = JsonUtilKt.jsonToObject(data, BaseAdminUser.class);
+        logger.info("用户登录认证！用户信息user：" + JsonUtilKt.json(sysUser));
         if (sysUser == null) {
             // 用户不存在
             return null;

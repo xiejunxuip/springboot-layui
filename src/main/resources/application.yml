@@ -1,6 +1,5 @@
 server:
-  port: 8102
-
+  port: 8080
 
 spring:
   application:
@@ -14,12 +13,16 @@ spring:
       min-idle: 1
       max-active: 20
       test-on-borrow: true
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-wait: 10000
 #  thymeleaf:
 #      cache: false
 #      mode: HTML5
 #      encoding: UTF-8
 #      content-type: text/html
+
+permission:
+  url: https://admin-dev.alivex.cn/admin
 
 mybatis:
     mapper-locations: classpath:mapper/*.xml

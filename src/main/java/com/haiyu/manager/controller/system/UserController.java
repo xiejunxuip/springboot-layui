@@ -1,5 +1,6 @@
 package com.haiyu.manager.controller.system;
 
+import com.haiyu.manager.common.utils.JsonUtilKt;
 import com.haiyu.manager.dto.LoginDTO;
 import com.haiyu.manager.dto.UserSearchDTO;
 import com.haiyu.manager.pojo.BaseAdminUser;
@@ -76,6 +77,8 @@ public class UserController {
             subject.login(token);
             // 登录成功
             BaseAdminUser user = (BaseAdminUser) subject.getPrincipal();
+            // String data = {"id":1,"sysUserName":"admin","sysUserPwd":"3ef7164d1f6167cb9f2658c07d3c2f0a","roleId":1,"userPhone":"13411182215","regTime":"2018-11-22 10:57:33","userStatus":1}
+            // BaseAdminUser user = JsonUtilKt.jsonToObject(data, BaseAdminUser.class);
 
             session.setAttribute("user", user.getSysUserName());
             data.put("code",1);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="haiyu @ 54.238.149.171" uuid="cba40212-f005-443d-8ede-47c304b64799">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://54.238.149.171:3306/haiyu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="haiyu @ localhost" uuid="1844ca15-f348-4c2e-a5b0-d997725b925d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/haiyu</jdbc-url>
+    </data-source>
+  </component>
+</project>
